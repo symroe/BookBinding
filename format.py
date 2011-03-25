@@ -45,7 +45,7 @@ class BookMaker():
             '%s' % self.file_path,
             "%s.png" % self.out_file_name]
         
-        # subprocess.call(" ".join(args), shell=True)
+        subprocess.call(" ".join(args), shell=True)
         self.populate_pages()
     
     def populate_pages(self):
