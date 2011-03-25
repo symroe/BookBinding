@@ -7,3 +7,15 @@ For the moment there is only one format: 8 page double folded.
 Place your PDFs in the ./pdfs folder, run format.py and find your books reasy to print in ./books.
 
 Requires python 2.7 and imagemagick.
+
+## Install ##
+
+You need to make 3 directories:
+
+* ./books/
+* ./pdfs/
+* ./pages/
+
+This is because git can't deal with empty folders:
+
+http://stackoverflow.com/questions/115983/how-do-i-add-an-empty-directory-to-a-git-repository
