@@ -1,0 +1,9 @@
+# Book Binder #
+
+This is a set of scripts for converting PDFs in to a format suited to manual book binding.
+
+For the moment there is only one format: 8 page double folded.
+
+Place your PDFs in the ./pdfs folder, run format.py and find your books reasy to print in ./books.
+
+Requires python 2.7 and imagemagick.

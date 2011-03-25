@@ -1,0 +1,8 @@
+.DS_Store
+*.pdf
+*.png
+bin
+build
+include
+lib
+
