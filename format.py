@@ -45,7 +45,7 @@ class BookMaker():
             '%s' % self.file_path,
             "%s.png" % self.out_file_name]
         
-        subprocess.call(" ".join(args), shell=True)
+        # subprocess.call(" ".join(args), shell=True)
         self.populate_pages()
     
     def populate_pages(self):
@@ -97,17 +97,20 @@ class BookMaker():
                     reordered.append(group[j])
                 except KeyError:
                     break
-                        
-            args = [
-                'montage',
-                " ".join(reordered),
-                '-tile',
-                '2x2',
-                '-geometry +0+0',
-                'books/%s-%s.png' % (self.book_name, i)
-            ]
-            # montage ordered* -tile 2x2 -geometry +0+0 montage.jpg
-            subprocess.call(" ".join(args), shell=True)
+                    
+            reordered_page_groups = zip(*[reordered[i::4] for i in range(4)])
+            for g in reordered_page_groups:
+                args = [
+                    'montage',
+                    " ".join(g),
+                    '-tile',
+                    '2x2',
+                    '-geometry',
+                    '+0+0',
+                    'books/%s-%s.png' % (self.book_name, i)
+                ]
+                # montage ordered* -tile 2x2 -geometry +0+0 montage.jpg
+                subprocess.call(" ".join(args), shell=True)
 
 
 if __name__ == "__main__":
