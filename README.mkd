@@ -4,7 +4,12 @@ This is a set of scripts for converting PDFs in to a format suited to manual boo
 
 For the moment there is only one format: 8 page double folded.
 
-Place your PDFs in the ./pdfs folder, run format.py and find your books reasy to print in ./books.
+Either:
+
+a) Place your PDFs in the ./pdfs folder, run format.py and find your books ready to print in ./books or
+
+b) Place images in the initial_images folder to have them chopped in half and processed
+
 
 Requires python 2.7 and imagemagick.
 
@@ -15,6 +20,7 @@ You need to make 3 directories:
 * ./books/
 * ./pdfs/
 * ./pages/
+* ./initial_images/
 
 This is because git can't deal with empty folders:
 
