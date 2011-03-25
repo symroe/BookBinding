@@ -1,6 +1,7 @@
 .DS_Store
-*.pdf
-*.png
+pdfs/*.pdf
+books/*.png
+pages/*.png
 bin
 build
 include
